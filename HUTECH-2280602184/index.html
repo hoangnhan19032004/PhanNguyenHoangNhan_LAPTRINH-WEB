@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swebi Coffee</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #01579b;
+            min-height: 500vh;
+            position: relative;
+        }
+
+        header {
+            background-color: #0288d1;
+            padding: 20px;
+            text-align: left;
+            color: white;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #0277bd;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .menu h2 {
+            color: #d32f2f;
+        }
+
+        .menu-category {
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .menu-item button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .auth-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .auth {
+            background-color: #ffcc00;
+            color: #01579b;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .auth:hover {
+            background-color: #ffeb3b;
+        }
+
+        .contact {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #01579b;
+            color: white;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+    </style>
+    <script>
+
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Swebi Coffee</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="orders.html">Đơn hàng</a></li>
+            <li><a href="delivery.html">Giao hàng</a></li>
+            <li><a href="loyalty.html">Thành viên</a></li>
+            <li><a href="promotions.html">Khuyến mãi</a></li>
+            <li><a href="careers.html">Tuyển dụng</a></li>
+        </ul>
+        <div class="auth-container">
+            <button class="auth" onclick="location.href='login.html'">Đăng nhập</button>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="vi"> Tiếng Việt</option>
+                    <option value="en"> English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    </section>
+    <footer class="contact">
+        <p data-lang="contact">Liên hệ: 0903 126 432 | Email: hoangnhan93204@gmail.com</p>
+        <p data-lang="address">Địa chỉ: 250 (Góc đường số 13) Tên Lửa, Bình Trị Đông B, Bình Tân, Thành phố Hồ Chí Minh , Việt Nam</p>
+    </footer>
+</body>
+</html>
