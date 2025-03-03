@@ -25,6 +25,76 @@
             font-size: 24px;
             padding-left: 20px;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro h2 {
+            color: #0288d1;
+            font-size: 26px;
+        }
+        .gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 350px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .promotions {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .promotions h2 {
+            color: #0277bd;
+            font-size: 24px;
+        }
+        .promo-item {
+            background: #b3e5fc;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .promo-item:hover {
+            background: #81d4fa;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .video-container iframe {
+            width: 90%;
+            height: 450px;
+            border-radius: 10px;
+        }
 
         nav {
             display: flex;
@@ -153,6 +223,33 @@
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Giới thiệu về Swebi Coffee</h2>
+            <p>Swebi Coffee mang đến hương vị cà phê đậm đà, không gian ấm cúng và trải nghiệm tuyệt vời cho khách hàng.</p>
+        </section>
+        <section class="video-container">
+            <h2>Trải nghiệm không gian & hương vị</h2>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section class="gallery">
+            <img src="cafe1.jpg" alt="Không gian quán">
+            <img src="cafe2.jpg" alt="Sản phẩm nổi bật">
+            <img src="cafe3.jpg" alt="Khách hàng thưởng thức cà phê">
+        </section>
+        <section class="promotions">
+            <h2>Chương trình ưu đãi</h2>
+            <div class="promo-item">
+                <h3>Mua 1 tặng 1 - Thứ 3 hàng tuần</h3>
+                <p>Thưởng thức cà phê cùng bạn bè, chỉ có tại Swebi Coffee!</p>
+            </div>
+            <div class="promo-item">
+                <h3>Giảm 20% cho thành viên mới</h3>
+                <p>Đăng ký thành viên ngay để nhận ưu đãi hấp dẫn.</p>
+            </div>
+        </section>
+    </div>
 
     
 
