@@ -62,10 +62,30 @@
             border-radius: 10px;
             object-fit: cover;
             transition: transform 0.4s ease-in-out;
+            cursor: pointer;
         }
         .gallery img:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .image-content {
+            display: none;
+            margin-top: 50px;
+            padding: 30px;
+            background: #f1f8e9;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .image-content img {
+            width: 50%;
+            border-radius: 12px;
+        }
+        .image-content .text {
+            width: 50%;
+            font-size: 20px;
         }
         .promotions {
             margin-top: 40px;
@@ -81,7 +101,7 @@
             margin-top: 15px;
             border-radius: 8px;
             font-size: 18px;
-            transition: background 0.3s;
+            transition: background 0.5s;
         }
         .promo-item:hover {
             background: #81d4fa;
@@ -193,8 +213,12 @@
 
     </style>
     <script>
-
-
+        function showContent(imageSrc, description) {
+            document.getElementById('contentImage').src = imageSrc;
+            document.getElementById('contentTitle').innerText = description.split('.')[0];
+            document.getElementById('contentDescription').innerText = description;
+            document.getElementById('imageContent').style.display = 'flex';
+        }
     </script>
 </head>
 
@@ -234,9 +258,16 @@
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         </section>
         <section class="gallery">
-            <img src="cafe1.jpg" alt="Không gian quán">
-            <img src="cafe2.jpg" alt="Sản phẩm nổi bật">
-            <img src="cafe3.jpg" alt="Khách hàng thưởng thức cà phê">
+            <img src="cafe1.jpg" alt="Không gian quán" onclick="showContent('cafe1.jpg', 'Không gian quán rộng rãi, hiện đại, mang lại cảm giác thư giãn.')">
+            <img src="cafe2.jpg" alt="Sản phẩm nổi bật" onclick="showContent('cafe2.jpg', 'Những ly cà phê thơm ngon, được pha chế từ nguyên liệu chất lượng cao.')">
+            <img src="cafe3.jpg" alt="Khách hàng thưởng thức cà phê" onclick="showContent('cafe3.jpg', 'Không gian lý tưởng để gặp gỡ bạn bè và thưởng thức đồ uống yêu thích.')">
+        </section>
+        <section class="image-content" id="imageContent">
+            <img id="contentImage" src="" alt="">
+            <div class="text">
+                <h3 id="contentTitle"></h3>
+                <p id="contentDescription"></p>
+            </div>
         </section>
         <section class="promotions">
             <h2>Chương trình ưu đãi</h2>
