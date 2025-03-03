@@ -1,2 +1,4 @@
 # PhanNguyenHoangNhan_LAPTRINH-WEB
-Đã thiết kế from đăng nhập , đăng kí 
+
+- Phan Nguyễn Hoàng Nhân(2280602184)
+- Huỳnh Phúc Xuân Mai(2280601885)
